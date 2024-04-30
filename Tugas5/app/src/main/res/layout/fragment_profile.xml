@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/myprofile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/gaben"/>
+
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gabe Newell"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/emerald"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/myusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LordGaben"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</FrameLayout>
