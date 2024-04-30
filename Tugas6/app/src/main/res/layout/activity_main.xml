@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:id="@+id/loadingapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"/>
+
+    <LinearLayout
+        android:id="@+id/lostlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/loadingapp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/losttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOST CONNECTION"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/tryagain"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="TRY AGAIN"
+            android:textStyle="bold"
+            android:backgroundTint="@color/bblue"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_users"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="1"
+        tools:itemCount="6"
+        tools:listitem="@layout/layout_user"/>
+
+    <ProgressBar
+        android:id="@+id/loadingmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_users"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/loadmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loadingmore"
+        android:text="LOAD MORE"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:backgroundTint="@color/bblue"/>
+
+</RelativeLayout>
